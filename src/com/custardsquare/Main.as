@@ -16,6 +16,7 @@ package com.custardsquare
 	import flash.geom.Rectangle;
 	import flash.ui.Keyboard;
 	import starling.core.Starling;
+	import starling.text.TextField;
 	
 	/**
 	 * ...
@@ -43,6 +44,8 @@ package com.custardsquare
 		private var _rotX:Number;
 		private var _rotY:Number;
 		private var _rotZ:Number;
+		
+		private var _info:TextField;
 
 		private function initProxies(e:Event = null):void
 		{
@@ -55,10 +58,11 @@ package com.custardsquare
 			stage3DProxy.antiAlias = 8;
 			stage3DProxy.color = 0x0;
 			
+			
 			_scale = 1;
 			_depth = 10;
 			
-			_rotX = 45;
+			_rotX = 90;
 			_rotY = 0;
 			_rotZ = 0;
 		}
@@ -69,7 +73,22 @@ package com.custardsquare
 			initAway3D();
 			initStarling();
 			
-			_keyHandeler = new KeyHandler(starling.stage);
+			_info = new TextField(200, 200, "##Model Info##", "Verdana", 16, 0x00ffff);
+			
+			_info.x = 0;
+			_info.y = 100;
+			_info.pivotX = 0;
+			_info.pivotY = 0;
+			_info.vAlign = "top";
+			_info.hAlign = "left";
+			_info.touchable = false;
+			
+			starling.stage.addChild(_info);
+			
+			KeyHandler.instance.init(starling.stage);
+			KeyHandler.instance.debugInfo = false;
+			
+			//_keyHandeler = new KeyHandler();
 			
 			ModelAssetLibrary.library.localDir = true;
 			
@@ -84,7 +103,12 @@ package com.custardsquare
 		
 		private function initAway3D():void
 		{
-			Custard3DStage.instance.init(this, stage3DProxy);
+			Custard3DStage.instance.init(this, stage3DProxy, true, true, false);
+			
+			Custard3DStage.instance.camera.x = 0;
+			Custard3DStage.instance.camera.y = 0;
+			Custard3DStage.instance.camera.z = -200;
+			Custard3DStage.instance.camera.rotationX = 0;
 		}
 		
 		private function initStarling():void
@@ -109,6 +133,7 @@ package com.custardsquare
 		
 		private function update():void
 		{
+			_info.text = _model.info();
 			if (KeyHandler.isKeyPressed(Keyboard.F1))
 			{
 				_model.playAnim("melee");
