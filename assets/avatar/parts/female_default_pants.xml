@@ -1,0 +1,11 @@
+<Model>
+	<ID>avatar/parts/female_default_pants</ID>
+	<FrameRate>24</FrameRate>
+	<Geometry file="avatar/female/default/pants/Geom_pants.awd" type="AWD"/>
+	<!-- This first animation will be defaulted to if the model does not have the requested animation-->
+	<!--<Animation id="idle" file="avatar/pants/posing_pants.general-A.dae" type="AWD"/>-->
+	<Animation id="idle" file="avatar/female/default/pants/idle_shift_pants.awd" type="AWD"/>
+	<Animation id="melee" file="avatar/female/default/pants/SwordSwing_pants.awd" type="AWD"/>
+	<Animation id="rifle" file="avatar/female/default/pants/RifleFire_pants.awd" type="AWD"/>
+	<Animation id="walk" file="avatar/female/default/pants/Walking_pants.awd" type="AWD"/>
+</Model>

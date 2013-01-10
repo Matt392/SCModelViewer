@@ -1,0 +1,7 @@
+<Model>
+	<ID>avatar/parts/loading_hands</ID>
+	<FrameRate>6</FrameRate>
+	<Geometry file="avatar/loading/hands/geom.awd" type="AWD"/>
+	<!-- This first animation will be defaulted to if the model does not have the requested animation-->
+	<Animation id="idle" file="avatar/unisex/default/hands/idle_shift_hands.awd" type="AWD"/>
+</Model>

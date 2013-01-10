@@ -1,0 +1,11 @@
+<Model>
+	<ID>avatar/parts/male_default_coat</ID>
+	<FrameRate>24</FrameRate>
+	<Geometry file="avatar/male/default/coat/Geom_coats.awd" type="AWD"/>
+	<!-- This first animation will be defaulted to if the model does not have the requested animation-->
+	<!--<Animation id="idle" file="avatar/hands/posing_hands.male-fist.dae" type="DAE"/>-->
+	<Animation id="idle" file="avatar/male/default/coat/idle_shift_coats.awd" type="AWD"/>
+	<Animation id="melee" file="avatar/male/default/coat/SwordSwing_coats.awd" type="AWD"/>
+	<Animation id="rifle" file="avatar/male/default/coat/RifleFire_coats.awd" type="AWD"/>
+	<Animation id="walk" file="avatar/male/default/coat/Walking_coats.awd" type="AWD"/>
+</Model>

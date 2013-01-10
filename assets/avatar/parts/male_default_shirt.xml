@@ -1,0 +1,11 @@
+<Model>
+	<ID>avatar/parts/male_default_shirt</ID>
+	<FrameRate>24</FrameRate>
+	<Geometry file="avatar/male/default/shirt/Geom_shirts.awd" type="AWD"/>
+	<!-- This first animation will be defaulted to if the model does not have the requested animation-->
+	<!--<Animation id="idle" file="avatar/shirts/posing_shirts.general-A.dae" type="DAE"/>-->
+	<Animation id="idle" file="avatar/male/default/shirt/idle_shift_shirts.awd" type="AWD"/>
+	<Animation id="melee" file="avatar/male/default/shirt/SwordSwing_shirts.awd" type="AWD"/>
+	<Animation id="rifle" file="avatar/male/default/shirt/RifleFire_shirts.awd" type="AWD"/>
+	<Animation id="walk" file="avatar/male/default/shirt/Walking_shirts.awd" type="AWD"/>
+</Model>

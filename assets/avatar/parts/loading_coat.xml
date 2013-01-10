@@ -1,0 +1,7 @@
+<Model>
+	<ID>avatar/parts/loading_coat</ID>
+	<FrameRate>6</FrameRate>
+	<Geometry file="avatar/loading/coat/geom.awd" type="AWD"/>
+	<!-- This first animation will be defaulted to if the model does not have the requested animation-->
+	<Animation id="idle" file="avatar/male/default/coat/idle_shift_coats.awd" type="AWD"/>
+</Model>

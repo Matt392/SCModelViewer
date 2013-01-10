@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<Path file="avatar/parts/"/>
+	<Scale x="0.5" y="0.5"/>
+	<Part file="male_default_hat"/>
+	<Part file="male_default_hair"/>
+	<Part file="male_default_head"/>
+	<Part file="male_default_shirt"/>
+	<Part file="male_default_hands"/>
+	<Part file="male_default_coat"/>
+	<Part file="male_default_pants"/>
+	<Part file="male_default_boots"/>
+</data>
